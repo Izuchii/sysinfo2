@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Monitor Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Real-Time System Monitor</h1>
+        <p id="timestamp" class="timestamp"></p>
+
+        <div class="grid">
+            <div class="card">
+                <h2>🧠 CPU</h2>
+                <p id="cpuModel"></p>
+                <p id="cpuCores"></p>
+                <p><strong id="cpuAvg"></strong></p>
+                <canvas id="cpuChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>💾 RAM</h2>
+                <p>Total: <span id="memTotal"></span></p>
+                <p>Used: <span id="memUsed"></span></p>
+                <p>Free: <span id="memFree"></span></p>
+                <p><strong id="memUsagePercent"></strong></p>
+                <canvas id="memChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ System Info</h2>
+            <p><b>OS:</b> <span id="osType"></span></p>
+            <p><b>Platform:</b> <span id="osPlatform"></span></p>
+            <p><b>Release:</b> <span id="osRelease"></span></p>
+            <p><b>Arch:</b> <span id="osArch"></span></p>
+            <p><b>Hostname:</b> <span id="osHostname"></span></p>
+            <p><b>Uptime:</b> <span id="osUptime"></span></p>
+            <p><b>User:</b> <span id="user"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
